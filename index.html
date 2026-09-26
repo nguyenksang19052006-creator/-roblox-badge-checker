@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roblox Badge Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+    .controls {
+      margin-bottom: 20px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    /* Grid layout for your badges */
+    .badge-grid {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    /* Default badge block styling (grey) */
+    .badge-card {
+      width: 150px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #e0e0e0; /* Grey when unearned */
+      border: 2px solid #ccc;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    /* Class added when the user owns the badge */
+    .badge-card.owned {
+      background-color: #a8f0a1; /* Turns green! */
+      border-color: #4caf50;
+    }
+    .badge-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Roblox Badge Tracker</h1>
+  <div class="controls">
+    <input type="text" id="username" placeholder="Enter Roblox Username">
+    <button onclick="checkBadges()">Check Badges</button>
+  </div>
+
+  <div class="badge-grid" id="badge-grid">
+    <!-- Badge blocks will be dynamically generated here -->
+  </div>
+
+  <!-- Link your JavaScript file here -->
+  <script src="script.js"></script>
+</body>
+</html>
